@@ -1,0 +1,20 @@
+<h1>Today's Specials</h1>
+<ul>
+  {{#each pies}}
+  <ul>
+      <li><h2>{{this.pie_name}}</h2></li>
+      <p>{{this.description}}</p>
+  </ul>
+  {{/each}}
+</ul>
+
+<h2>Add a Pie</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Pie Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <button type="submit">Add Pie</button>
+</form>
