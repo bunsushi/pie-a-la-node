@@ -1,20 +1,36 @@
-<h1>Today's Specials</h1>
-<ul>
-  {{#each pies}}
-  <ul>
-      <li><h2>{{this.pie_name}}</h2></li>
-      <p>{{this.description}}</p>
-  </ul>
-  {{/each}}
-</ul>
+{{!-- Reconfigure this into a navbar --}}
+<div class="page-header">
+    <h1>Pie &agrave la Mode</h1>
+</div>
 
-<h2>Add a Pie</h2>
-<form class="create-form">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5 offset-md-1">
+            <div id="chalkboard">
+                <h1>Today's Specials</h1>
+                <ul>
+                    {{#each pies}}
+                    <ul>
+                        <li>
+                            <h2>{{this.pie_name}}</h2>
+                        </li>
+                        <p>{{this.description}}</p>
+                    </ul>
+                    {{/each}}
+                </ul>
+            </div>
 
-  <div class="form-group">
-    <label for="ca">Pie Name:</label>
-    <input type="text" id="ca" name="name">
-  </div>
+            <h2>Add a Pie</h2>
+            <form class="create-form">
 
-  <button type="submit">Add Pie</button>
-</form>
+                <div class="form-group">
+                    <label for="ca">Pie Name:</label>
+                    <input type="text" id="ca" name="name">
+                </div>
+
+                <button type="submit">Add Pie</button>
+            </form>
+        </div>
+        <div class="col-md-6">Hello</div>
+    </div>
+</div>

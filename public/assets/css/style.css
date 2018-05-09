@@ -1,0 +1,72 @@
+body {
+  background-color: rgba(188,38,26,1);
+  background-image:
+    linear-gradient(90deg, 
+      rgba(255,255,255,0.5) 0%,
+      rgba(255,255,255,0.5) 10%,
+      rgba(255,255,255,0) 10%,
+      rgba(255,255,255,0) 20%,
+      rgba(255,255,255,0.5) 20%,
+      rgba(255,255,255,0.5) 30%,
+      rgba(255,255,255,0) 30%,
+      rgba(255,255,255,0) 40%,
+      rgba(255,255,255,0.5) 40%,
+      rgba(255,255,255,0.5) 50%,
+      rgba(255,255,255,0) 50%,
+      rgba(255,255,255,0) 60%,
+      rgba(255,255,255,0.5) 60%,
+      rgba(255,255,255,0.5) 70%,
+      rgba(255,255,255,0) 70%,
+      rgba(255,255,255,0) 80%,
+      rgba(255,255,255,0.5) 80%,
+      rgba(255,255,255,0.5) 90%,
+      rgba(255,255,255,0) 90%,
+      rgba(255,255,255,0) 100%
+    ),
+    linear-gradient(0, 
+      rgba(255,255,255,0.5) 0%,
+      rgba(255,255,255,0.5) 10%,
+      rgba(255,255,255,0) 10%,
+      rgba(255,255,255,0) 20%,
+      rgba(255,255,255,0.5) 20%,
+      rgba(255,255,255,0.5) 30%,
+      rgba(255,255,255,0) 30%,
+      rgba(255,255,255,0) 40%,
+      rgba(255,255,255,0.5) 40%,
+      rgba(255,255,255,0.5) 50%,
+      rgba(255,255,255,0) 50%,
+      rgba(255,255,255,0) 60%,
+      rgba(255,255,255,0.5) 60%,
+      rgba(255,255,255,0.5) 70%,
+      rgba(255,255,255,0) 70%,
+      rgba(255,255,255,0) 80%,
+      rgba(255,255,255,0.5) 80%,
+      rgba(255,255,255,0.5) 90%,
+      rgba(255,255,255,0) 90%,
+      rgba(255,255,255,0) 100%
+    );
+  background-size: 15em 15em;
+	background-position: 50% 50%;
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+}
+
+.page-header {
+    padding: 20px 0 9px 0;
+    border-bottom: 1px solid #eee;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(188,38,26);
+}
+
+/* Chalkboard Styles */
+#chalkboard {
+    background-image: url('../img/chalkboard-black.jpg');
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+    transform: rotate(-1deg);
+}
