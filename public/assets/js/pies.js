@@ -34,11 +34,14 @@ $(document).ready(function () {
 
     function makePieIngredients() {
         for (var i = 0; i < pieFruits.length; i++) {
+            var fruitBasket = $("<div>");
+            fruitBasket.addClass("fruit-button");
+
             var fruit = $("<img>");
             fruit.attr("src", pieFruits[i].image);
-            fruit.addClass("fruit-button");
-            // fruit.append(pieFruits[i].image);
-            $("#pie-fruit").append(fruit);
+
+            fruitBasket.append(fruit);
+            $("#pie-fruit").append(fruitBasket);
             console.log("I'm connected");
         }
     }
