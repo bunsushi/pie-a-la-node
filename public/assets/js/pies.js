@@ -43,8 +43,30 @@ $(document).ready(function () {
             fruitBasket.append(fruit);
             $("#pie-fruit").append(fruitBasket);
             console.log("I'm connected");
-        }
-    }
+        };
+    };
+
+    // Event Listener
+    $(".create-form").on("submit", function (event) {
+        // Make sure to preventDefault on a submit event.
+        event.preventDefault();
+
+        var newPie = {
+            pie_name: $("#pie-name").val().trim(),
+        };
+
+        // Send the POST request.
+        $.ajax("/api/pies", {
+            type: "POST",
+            data: newPie
+        }).then(
+            function () {
+                console.log("Invented a new pie!");
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
+    });
 
     makePieIngredients();
 
