@@ -1,8 +1,3 @@
-{{!-- Reconfigure this into a navbar --}}
-<div class="page-header">
-    <h1>Pie &agrave la Node</h1>
-</div>
-
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -28,7 +23,28 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-5 offset-md-1">
+        {{!-- Reconfigure this into a navbar --}}
+        <div class="col-md-1">
+            <div class="page-header">
+                <h1>Pie &agrave la Node</h1>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div id="pastry-board">
+                <h2>Add a Pie</h2>
+                <div id="pie-fruit"></div>
+                <form class="create-form">
+
+                    <div class="form-group">
+                        <label for="pie-name">Pie Name:</label>
+                        <input type="text" id="pie-name" name="pie_name">
+                    </div>
+
+                    <button type="submit">Add Pie</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
             <div id="chalkboard">
                 {{!--
                 <h1>Today's Specials</h1> --}}
@@ -45,19 +61,6 @@
                     {{/each}}
                 </ul>
             </div>
-        </div>
-        <div class="offset-md-1 col-md-5">
-            <div id="pie-fruit"></div>
-            <h2>Add a Pie</h2>
-            <form class="create-form">
-
-                <div class="form-group">
-                    <label for="pie-name">Pie Name:</label>
-                    <input type="text" id="pie-name" name="pie_name">
-                </div>
-
-                <button type="submit">Add Pie</button>
-            </form>
         </div>
     </div>
 </div>
