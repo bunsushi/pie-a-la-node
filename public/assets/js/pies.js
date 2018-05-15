@@ -29,22 +29,37 @@ $(document).ready(function () {
         fruit: "raspberry",
         image: "/assets/img/raspberry.png"
     }, {
-        fruit: "strawbery",
+        fruit: "strawberry",
         image: "/assets/img/strawberry.png"
     }];
 
     function makePieIngredients() {
         for (var i = 0; i < pieFruits.length; i++) {
-            var fruitBasket = $("<div>");
-            fruitBasket.addClass("fruit-button");
+            // var fruitBasket = $("<div>");
+            // fruitBasket.addClass("fruit-button");
 
-            var fruit = $("<img>");
+            var fruitInput = $("<input type='checkbox' name='option' id='" + pieFruits[i].fruit + "'>");
+            fruitInput.addClass("checkbox")
+
+            var fruitLabel = $("<label>");
+            fruitLabel.attr("for", pieFruits[i].fruit);
+            fruitLabel.addClass("fruit-button");
+
+            var fruit = $("<img class='fruit-image'>");
             fruit.attr("src", pieFruits[i].image);
 
-            fruitBasket.append(fruit);
-            $("#pie-fruit").append(fruitBasket);
+            fruitLabel.append(fruit);;
+
+            $("#pie-fruit").append(fruitInput);
+            $("#pie-fruit").append(fruitLabel);
         };
     };
+
+    // Capture input
+    $(".checkbox").on("click", function () {
+
+        console.log('Hello');
+    })
 
     // Event Listeners
     $(".create-form").on("submit", function (event) {
@@ -68,26 +83,26 @@ $(document).ready(function () {
         );
     });
 
-    $(".toggle-stock").on("click", function(event) {
+    $(".toggle-stock").on("click", function (event) {
         var id = $(this).data("id");
         var newStock = $(this).data("newstock");
-    
+
         var newStockState = {
-          stock: newStock
+            stock: newStock
         };
-    
+
         // Send the PUT request.
         $.ajax("/api/pies/" + id, {
-          type: "PUT",
-          data: newStockState
+            type: "PUT",
+            data: newStockState
         }).then(
-          function() {
-            console.log("changed stock to", newStock);
-            // Reload the page to get the updated list
-            location.reload();
-          }
+            function () {
+                console.log("changed stock to", newStock);
+                // Reload the page to get the updated list
+                location.reload();
+            }
         );
-      });
+    });
 
     $(".delete-pie").on("click", function (event) {
         var id = $(this).data("id");
