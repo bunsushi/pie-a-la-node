@@ -1,6 +1,7 @@
 // $(window).load(function(){        
 //     $('#myModal').modal('show');
 //      });
+
 $(document).ready(function () {
 
     var pieFruits = [{
@@ -42,11 +43,10 @@ $(document).ready(function () {
 
             fruitBasket.append(fruit);
             $("#pie-fruit").append(fruitBasket);
-            console.log("I'm connected");
         };
     };
 
-    // Event Listener
+    // Event Listeners
     $(".create-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
@@ -62,6 +62,21 @@ $(document).ready(function () {
         }).then(
             function () {
                 console.log("Invented a new pie!");
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
+    });
+
+    $(".delete-pie").on("click", function (event) {
+        var id = $(this).data("id");
+
+        // Send the DELETE request.
+        $.ajax("/api/pies/" + id, {
+            type: "DELETE"
+        }).then(
+            function () {
+                console.log("deleted pie", id);
                 // Reload the page to get the updated list
                 location.reload();
             }

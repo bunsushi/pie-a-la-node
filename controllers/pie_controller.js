@@ -37,4 +37,17 @@ router.put("/api/pies/:id", function(req, res) {
     );
 });
 
+router.delete("/api/pies/:id", function(req, res) {
+    var condition = "id = " + req.params.id;
+  
+    pie.delete(condition, function(result) {
+      if (result.affectedRows == 0) {
+        // If no rows were changed, then the ID must not exist, so 404
+        return res.status(404).end();
+      } else {
+        res.status(200).end();
+      }
+    });
+  });
+
 module.exports = router;
