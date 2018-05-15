@@ -35,18 +35,21 @@ $(document).ready(function () {
 
     function makePieIngredients() {
         for (var i = 0; i < pieFruits.length; i++) {
-            // var fruitBasket = $("<div>");
-            // fruitBasket.addClass("fruit-button");
 
-            var fruitInput = $("<input type='checkbox' name='option' id='" + pieFruits[i].fruit + "'>");
-            fruitInput.addClass("checkbox")
+            var fruitInput = $("<input type='checkbox' name='option' id='" + pieFruits[i].fruit + "'/>");
+            fruitInput.attr("value", pieFruits[i].fruit);
 
             var fruitLabel = $("<label>");
             fruitLabel.attr("for", pieFruits[i].fruit);
             fruitLabel.addClass("fruit-button");
 
+            // var fruitBasket = $("<div>");
+            // fruitBasket.addClass("fruit-button");
+
             var fruit = $("<img class='fruit-image'>");
             fruit.attr("src", pieFruits[i].image);
+
+            // fruitBasket.append(fruit);
 
             fruitLabel.append(fruit);;
 
@@ -54,12 +57,6 @@ $(document).ready(function () {
             $("#pie-fruit").append(fruitLabel);
         };
     };
-
-    // Capture input
-    $(".checkbox").on("click", function () {
-
-        console.log('Hello');
-    })
 
     // Event Listeners
     $(".create-form").on("submit", function (event) {
@@ -120,5 +117,14 @@ $(document).ready(function () {
     });
 
     makePieIngredients();
+
+    // Capture input
+    $(".fruit-button").on("click", function () {
+        event.preventDefault();
+        $(this).toggleClass("fruit-active");
+        console.log($(this).attr('for'));
+        // TO DO:
+        // push labels to array for description; if array contains >1, delete repeats
+    });
 
 });
