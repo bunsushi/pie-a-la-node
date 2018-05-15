@@ -12,7 +12,7 @@ body {
 
 h1 {
   font-family: 'Heart of Everything', 'Sacramento', cursive;
-  font-weight: bold;
+  /* font-weight: bold; */
   letter-spacing: 3px;
   padding-top: 20px;
   text-align: center;
@@ -81,6 +81,10 @@ h2 {
   height: 100%;
 }
 
+#title {
+  font-weight: bold;
+}
+
 /* Ingredients Styles */
 
 #pastry-board {
@@ -89,7 +93,7 @@ h2 {
   border-radius: 5px;
   text-align: center;
   transform: rotate(-3deg);
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 #pie-fruit {
@@ -102,9 +106,9 @@ h2 {
   width: 125px;
   padding: 15px;
   margin: 10px;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.2);
   border-radius: 50%;
-  border: 3px solid grey;
+  border: 2px solid #999;
   position: relative;
 }
 
