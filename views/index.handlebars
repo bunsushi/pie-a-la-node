@@ -47,18 +47,23 @@
         <div class="col-md-6">
             <div id="chalkboard">
                 <h1>Today's Specials</h1>
+                    
                 <ul>
                     {{#each pies}}
-                    <ul>
-                        <li>
-                            <h2>{{this.pie_name}}<button class="delete-pie" data-id="{{this.id}}"><i class="far fa-trash-alt"></i>
-</button></h2>
-                        </li>
-                        <p>{{this.description}}</p>
-                    </ul>
+                        {{#if stock}}
+                            {{> pies/pie-stock stock=true}}
+                        {{/if}}
                     {{/each}}
                 </ul>
+
                 <h1>Sold Out!</h1>
+                <ul>
+                    {{#each pies}} 
+                        {{#unless stock}} 
+                            {{> pies/pie-stock stock=false}} 
+                        {{/unless}} 
+                    {{/each}}
+                </ul>
             </div>
         </div>
     </div>
