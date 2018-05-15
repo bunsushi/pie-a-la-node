@@ -4,9 +4,9 @@
 } 
 
 body {
-  background-color: rgba(188,38,26,1);
-  /* background-image: url('../img/chalkboard-black.jpg'); */
+  background-color: #222;
   background-image: url('../img/flour-chalkboard.png');
+  font-family: cursive;
 }
 
 h1 {
@@ -121,14 +121,17 @@ h2 {
   border: 3px solid purple;
 }
 
+.add-pie{
+  background-image: url('../img/pie.jpg');
+  height: 50px;
+}
+
 /* Chalkboard Styles */
+
 #chalkboard {
-  /* background-image: url('../img/chalkboard-black.jpg'); */
   color: rgba(255, 255, 255, .9);
   padding: 20px;
-  /* border-radius: 5px; */
   min-height: 500px;
-  /* transform: rotate(-1deg); */
 }
 
 #todays-specials {
@@ -137,18 +140,18 @@ h2 {
   opacity: .9;
 }
 
-.delete-pie {
+.pie-button {
   background-color: transparent;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
-  padding: 5px;
+  padding: 7px;
   margin-left: 20px;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
 }
 
-.delete-pie:hover {
+.pie-button:hover {
   cursor: pointer;
   background-color: rgba(255,255,255,0.5)
 }
