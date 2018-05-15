@@ -1,20 +1,31 @@
+@font-face { 
+  font-family: 'Heart of Everything';
+  src: url('../Heart-of-Everything.ttf');
+} 
+
 body {
   background-color: rgba(188,38,26,1);
   /* background-image: url('../img/chalkboard-black.jpg'); */
   background-image: url('../img/flour-chalkboard.png');
 }
 
-h1, h2 {
-    font-family: 'Sacramento', cursive;
+h1 {
+  font-family: 'Heart of Everything', 'Sacramento', cursive;
+  text-align: center;
+  font-size: 4em;
+}
+
+h2 {
+  font-family: 'Sacramento', cursive;
 }
 
 .page-header {
-    padding: 20px;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 30px;
-    background-color: rgba(188,38,26, 1);
-    background-image:
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: rgba(188,38,26, 1);
+  background-image:
     linear-gradient(90deg, 
       rgba(255,255,255,0.5) 0%,
       rgba(255,255,255,0.5) 10%,
@@ -59,10 +70,10 @@ h1, h2 {
       rgba(255,255,255,0) 90%,
       rgba(255,255,255,0) 100%
     );
-    background-size: 10em 10em;
-    background-position: 50% 50%;
-    position: fixed;
-    height: 100vh;
+  background-size: 10em 10em;
+  background-position: 50% 50%;
+  position: fixed;
+  height: 100%;
 }
 
 /* Ingredients Styles */
@@ -73,7 +84,7 @@ h1, h2 {
   border-radius: 5px;
   text-align: center;
   transform: rotate(-1deg);
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 #pie-fruit {
@@ -112,24 +123,32 @@ h1, h2 {
 
 /* Chalkboard Styles */
 #chalkboard {
-    /* background-image: url('../img/chalkboard-black.jpg'); */
-    color: rgba(255, 255, 255, .9);
-    padding: 20px;
-    /* border-radius: 5px; */
-    min-height: 500px;
-    /* transform: rotate(-1deg); */
+  /* background-image: url('../img/chalkboard-black.jpg'); */
+  color: rgba(255, 255, 255, .9);
+  padding: 20px;
+  /* border-radius: 5px; */
+  min-height: 500px;
+  /* transform: rotate(-1deg); */
 }
 
 #todays-specials {
-    display: block;
-    margin: 20px auto;
-    opacity: .9;
+  display: block;
+  margin: 20px auto;
+  opacity: .9;
 }
 
 .delete-pie {
-    background-color: pink;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 20px;
+  color: #fff;
+  font-size: 14px;
 }
 
 .delete-pie:hover {
   cursor: pointer;
+  background-color: rgba(255,255,255,0.5)
 }
