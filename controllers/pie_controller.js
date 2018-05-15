@@ -25,7 +25,7 @@ router.put("/api/pies/:id", function(req, res) {
 
     pie.update(
         {
-            description: req.body.description
+            stock: req.body.stock
         },
         condition,
         function(results) {

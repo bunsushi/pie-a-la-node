@@ -68,6 +68,27 @@ $(document).ready(function () {
         );
     });
 
+    $(".toggle-stock").on("click", function(event) {
+        var id = $(this).data("id");
+        var newStock = $(this).data("newstock");
+    
+        var newStockState = {
+          stock: newStock
+        };
+    
+        // Send the PUT request.
+        $.ajax("/api/pies/" + id, {
+          type: "PUT",
+          data: newStockState
+        }).then(
+          function() {
+            console.log("changed stock to", newStock);
+            // Reload the page to get the updated list
+            location.reload();
+          }
+        );
+      });
+
     $(".delete-pie").on("click", function (event) {
         var id = $(this).data("id");
 

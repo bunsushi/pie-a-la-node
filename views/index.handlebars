@@ -51,7 +51,7 @@
                 <ul>
                     {{#each pies}}
                         {{#if stock}}
-                            {{> pies/pie-stock stock=true}}
+                            {{> pies/pie-stock stock=false}}
                         {{/if}}
                     {{/each}}
                 </ul>
@@ -60,7 +60,7 @@
                 <ul>
                     {{#each pies}} 
                         {{#unless stock}} 
-                            {{> pies/pie-stock stock=false}} 
+                            {{> pies/pie-stock stock=true}} 
                         {{/unless}} 
                     {{/each}}
                 </ul>
