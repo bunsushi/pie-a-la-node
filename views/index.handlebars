@@ -40,7 +40,7 @@
                         <input type="text" id="pie-name" name="pie_name">
                     </div>
 
-                    <button type="submit" class="add-pie">Add Pie</button>
+                    <button type="submit" id="add-pie">Add Pie</button>
                 </form>
             </div>
         </div>
@@ -48,22 +48,18 @@
             <div id="chalkboard">
                 <h1>Today's Specials</h1>
                     
-                <ul>
                     {{#each pies}}
                         {{#if stock}}
                             {{> pies/pie-stock stock=false}}
                         {{/if}}
                     {{/each}}
-                </ul>
 
-                <h1>Sold Out!</h1>
-                <ul>
+                <h1>Sold Out</h1>
                     {{#each pies}} 
                         {{#unless stock}} 
                             {{> pies/pie-stock stock=true}} 
                         {{/unless}} 
                     {{/each}}
-                </ul>
             </div>
         </div>
     </div>
